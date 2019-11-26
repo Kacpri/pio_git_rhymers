@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
+import java.util.stream.IntStream;
+
 class RhymersDemo {
 
     public static void main(String[] args) {
@@ -19,14 +21,14 @@ class RhymersDemo {
         for (int i = 1; i < 15; i++)
             rhymers[3].countIn(rn.nextInt(20));
 
-        for (int i = 0; i < rhymers.length; i++) {
+        IntStream.range(0, rhymers.length).forEach(i -> {
             while (!rhymers[i].callCheck())
                 System.out.print(rhymers[i].countOut() + "  ");
             System.out.println();
-        }
+        });
 
         System.out.println("total rejected is "
-                + ((HanoiRhymer) rhymers[3]).reportRejected());
+                + ((HanoiRhymer) rhymers[3]).getTotalRejected());
 
     }
 //	kombinacji klawiszy alt + ← oraz alt + → służy do szybkiego poruszania się po otwartych plikach
