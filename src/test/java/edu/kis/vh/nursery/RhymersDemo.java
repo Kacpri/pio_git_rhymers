@@ -9,7 +9,10 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
+        stackFactory(factory);
+    }
 
+    private static void stackFactory(RhymersFactory factory) {
         DefaultCountingOutRhymer[] rhymers = {factory.GetStandardRhymer(), factory.GetFalseRhymer(),
                 factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
 
@@ -29,7 +32,6 @@ class RhymersDemo {
 
         System.out.println("total rejected is "
                 + ((HanoiRhymer) rhymers[3]).getTotalRejected());
-
     }
 //	kombinacji klawiszy alt + ← oraz alt + → służy do szybkiego poruszania się po otwartych plikach
 //  bez konieczności używania myszki.
