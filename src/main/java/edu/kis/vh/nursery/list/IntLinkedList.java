@@ -32,7 +32,7 @@ public class IntLinkedList {
      * Returns true if, and only if, Node last is null which means that the list does not contain anything.
      * @return True if last node is null otherwise false
      */
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return last == null;
     }
 
