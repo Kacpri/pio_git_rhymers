@@ -9,10 +9,10 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
-        stackFactory(factory);
+        testRhymers(factory);
     }
 
-    private static void stackFactory(RhymersFactory factory) {
+    private static void testRhymers(RhymersFactory factory) {
         DefaultCountingOutRhymer[] rhymers = {factory.GetStandardRhymer(), factory.GetFalseRhymer(),
                 factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
 
